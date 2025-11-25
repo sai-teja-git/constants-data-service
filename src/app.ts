@@ -1,5 +1,5 @@
 import express from "express";
-import constantsRouter from "./routes/base.route.js";
+import baseRouter from "./routes/base.route.js";
 import { errorMiddleware } from "./middleware/error.middleware.js";
 
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use("/", constantsRouter);
+app.use("/", baseRouter);
 
 // Error Handler
 app.use(errorMiddleware);
